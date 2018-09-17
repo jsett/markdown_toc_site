@@ -1,0 +1,29 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script>
+	function gen()
+	{
+		data = $('#input').val();
+		var regex = /# .*/g;
+		var found = data.match(regex);
+		var out = ""
+		for (x of found){
+		out = out +"- [" + x.slice(2) + "](#" + x.slice(2).replace(/ /g,"-")+"]\n"
+		}
+		$('#output').val(out);
+	}
+	</script>
+</head>
+<body>
+<p>copy the markdown to the following</p>
+<textarea id="input">
+</textarea>
+<br>
+<button onclick="gen()">Generate</button>
+<br>
+<textarea id="output">
+</textarea>
+</body>
+</html>
