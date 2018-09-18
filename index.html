@@ -10,7 +10,7 @@
 		var found = data.match(regex);
 		var out = ""
 		for (x of found){
-		out = out +"- [" + x.slice(2) + "](#" + x.slice(2).replace(/ /g,"-")+"]\n"
+		out = out +"- [" + x.slice(2) + "](#" + x.slice(2).replace(/ /g,"-")+")\n"
 		}
 		$('#output').val(out);
 	}
